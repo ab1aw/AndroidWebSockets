@@ -92,6 +92,9 @@ public class MainActivity extends AppCompatActivity {
                     //getTetheringInfo(tag);
 
                     {
+                        // Stolen from here:
+                        // https://stackoverflow.com/questions/62550498/permission-denied-for-access-proc-net-arp-arp-table-in-android-10
+                        
                         Log.v(tag, "Step two");
                         Runtime runtime = Runtime.getRuntime();
                         Process proc = runtime.exec("ip neigh show");
